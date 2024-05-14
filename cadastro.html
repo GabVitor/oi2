@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<!-- Título -->
+		<title> AdventureLand | Login/Cadastro </title>
+		<meta name = "description" content = ""></meta>
+		<link rel = "icon" href = "imagens/favicon.ico">
+		<link rel = "stylesheet" href = "web.css">
+	</head>
+	<body class="background">
+		<header>
+			<button class="menu-toggle botao">&#9776;</button>
+			<nav>
+				<ul>
+					<a href = "index.html" target = ""> <img src = "imagens/logo.png" height = "80" width = "80"/></a>
+					<div class = "cabecalho">
+						<li><button class="botao"><a class = "letras" href = "atracoes.html" target =""> ATRAÇÕES</a></button></li> &nbsp &nbsp
+						<li><button class="botao"><a class = "letras" href = "perguntas_frequentes.html" target = ""> PERGUNTAS FREQUENTES</a></button></li> &nbsp &nbsp
+						<li><button class="botao"><a class = "letras" href = "contato.html" target = ""> CONTATO</a></button</li> &nbsp &nbsp
+						<li><button class="botao"><a class = "letras" href = "cadastro.html" target = ""> CADASTRO</a></button></li>&nbsp &nbsp	
+					</div>
+				</ul>
+			</nav>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		</header>
+		
+	<center><strong><h1 class="letras"> Cadastro de Cliente </h1></strong></center>
+	<center><div class = "login">
+	<form action = "#"	onsubmit="senhacorreta();" method = "post"><center>
+		<label class="letras" for = "nome"> Nome: </label><br>
+		<input type = "text" id = "nome" name = "nome" required minlength = "3"
+		maxlength = "50" placeholder = "Digite seu nome"><br>
+		
+		<label class="letras" for = "email"> E-mail: </label><br>
+		<input type = "email" id = "email" name = "email" required placeholder = "Digite seu e-mail"><br>
+		
+		<label class="letras" for "senha"> Senha: </label><br>
+		<input type = "password" id = "senha" name = "senha" required minlength = "3" placeholder = "Digita sua senha" onchange="conferir();"><br>
+		
+		<label class="letras" for "confirmar_senha"> Confirmar Senha: </label><br>
+		<input type = "password" id = "confirmar_senhar" name = "confirmar_senha" required placeholder = "Confirmar Senhar" onchange="conferir();"><br>
+		
+		<label class="letras" for "idade"> Idade: </label><br>
+		<input type = "number" id = "idade" name = "idade" min = "18" max "120" required placeholder = "Sua idade"><br>
+		
+		<label class="letras" for "genero"> Gênero: </label><br>
+		<select id = "genero" name = "genero" required>
+			<option value = ""> Selecione... </option>
+			<option value = "M"> Masculino </option>
+			<option value = "F"> Feminino </option>
+			<option value = "O"> Outro </option>
+		</select><br>
+		
+		<label class="letras" for "data_nascimento"> Data de nascimento: </label><br>
+		<input type = "date" id = "data_nascimento" name = "data_nascimento" required placeholder = "Digita sua data de nascimento"><br>
+		
+		<label class="letras" for "telefone"> Telefone: </label><br>
+		<input type = "tel" id = "telefone" name = "telefone" pattern = "[0-9] {10}" placeholder = "Digite seu número"><br>
+		
+		<label class="letras" for "endereco"> Endereço: </label><br>
+		<input type ="text" id = "endereco" name = "endereco" required placeholder = "Digite seu endereço"><br>
+		
+		<label class="letras" for "cidade"> Cidade: </label><br>
+		<input type = "text" id = "cidade" name = "cidade" required placeholder = "Digite sua cidade"><br>
+		
+		<label class="letras" for "estado"> Estado: </label><br>
+		<select id = "estado" name = "estado" required>
+			<option value = ""> Selecione...</option>
+			<option value = "AC"> Acre </option>
+			<option value = "AL"> Alagoas </option>
+			<option value = "AP"> Amapá </option>
+			<option value = "AM"> Amazonas </option>
+			<option value = "BA"> Bahia </option>
+			<option value = "CE"> Ceará </option>
+			<option value = "ES"> Espirito Santo </option>
+			<option value = "GO"> Goiás </option>
+			<option value = "MA"> Maranhão </option>
+			<option value = "MT"> Mato Grosso </option>
+			<option value = "MS"> Mato Grosso do Sul </option>
+			<option value = "MG"> Minas Gerais </option>
+			<option value = "PA"> Pará </option>
+			<option value = "PB"> Paraíba </option>
+			<option value = "PR"> Paraná </option> 
+			<option value = "PE"> Pernambuco </option>
+			<option value = "PI"> Piauí </option>
+			<option value = "RJ"> Rio de Janeiro </option>
+			<option value = "RN"> Rio Grande do Norte </option>
+			<option value = "RS"> Rio Grande do Sul </option>
+			<option value = "RO"> Rondônia </option>
+			<option value = "RR"> Roraima </option>
+			<option value = "SC"> Santa Catarina </option>
+			<option value = "SP"> São Paulo </option>
+			<option value = "SE"> Sergipe </option>
+			<option value = "TO"> Tocantins </option>
+		</select><br>
+		<input class = "enviar" type = "submit" value = "Enviar">
+	</form></center>
+	</div></center>
+	<script src="web.js"></script>
+	</body>
+</html>

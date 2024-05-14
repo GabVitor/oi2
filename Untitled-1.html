@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UFT-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <button type="button" onclick="criarQuadrado()">Criar quadrado</button>
+    
+    <p id="demo">Loren Ipsun Dolores Siamet.</p>
+    <button type="button" onclick="alterarEstilo()">Clique aqui!</button>
+    <script>
+      function alterarEstilo(){
+        document.getElementById("demo").style.fontSize = "55px";
+        document.getElementById("demo").style.color = "red";
+      
+        //document.getElementById("demo").style.display = "none";
+        document.getElementById("demo").style.display = "block";
+      }
+      </script>
+    <script>
+      function criarQuadrado() {
+        var boxElement = document.createElement("div");
+        boxElement.style.width = 300;
+        boxElement.style.height = 300;
+        boxElement.style.display = "inline-block";
+        boxElement.style.backgroundColor = "#FF0000";
+        boxElement.addEventListener('mouseover', function(){
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+            }
+            return this.style.background = color;
+        });
+
+        var container = document.getElementById("container");
+        container.appendChild(boxElement);
+      }
+</script>
+<div id='apresentacao'></div>
+
+
+<script>
+let nome = prompt("Qual o seu nome?");
+let frase = "Seja bem vindo(a) "+nome+"!";
+document.getElementById("apresentacao").innerHTML = frase;
+</script>
+  </body>
+</html>
